@@ -4,9 +4,8 @@ public class StartClient {
  	   try{
  	        System.out.println("Hello ");        	        
                  Client c=new Client("Renan");
-                 Thread t1=new Thread();
+                 Thread t1=new Thread(c);
                  t1.start();
-}catch(Exception e){e.printStackTrace();}
- 
-}
+ 	   }catch(Exception e){e.printStackTrace();}
+    }
 }

@@ -3,7 +3,7 @@ import javax.swing.*;
     import java.awt.event.*;
     import java.io.*;
     import java.net.*;
-public class Client {   
+public class Client implements Runnable {   
         public JTextField tx;
         public JTextArea ta;
         public String login="Imed";
@@ -46,7 +46,8 @@ public class Client {
                try{
                    writer.write(s);
                    writer.write("\r\n");
-                   writer.flush(); 
+                   writer.flush();
+                   
                    }catch(Exception e){e.printStackTrace();}
            }
          }
